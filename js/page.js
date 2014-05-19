@@ -1,30 +1,28 @@
 var Page = (function() {
 
-	var $container = $( '#container' ),
-		$bookBlock = $( '#bb-bookblock' ),
+	var $sidebar = $('.sidebar'),
+		$bookBlock = $('#bb-bookblock'),
 		$items = $bookBlock.children(),
 		itemsCount = $items.length,
 		current = 0,
-		bb = $( '#bb-bookblock' ).bookblock( {
+		bb = $('#bb-bookblock').bookblock( {
 			speed : 700,
 			perspective : 2000,
 			shadowSides	: 0.8,
 			shadowFlip	: 0.4,
 			onEndFlip : function(old, page, isLimit) {
-				
 				current = page;
 				// updateNavigation
-				updateNavigation( isLimit );
+				updateNavigation(isLimit);
 				// initialize jScrollPane on the content div for the new item
 				setJSP( 'init' );
 				// destroy jScrollPane on the content div for the old item
 				setJSP( 'destroy', old );
-
 			}
 		} ),
 		$navNext = $( '#bb-nav-next' ),
 		$navPrev = $( '#bb-nav-prev' ).hide(),
-		$menuItems = $container.find( 'ul.chapters > li' ),
+		$menuItems = $sidebar.find( 'ul.chapters > li' ),
 		transEndEventNames = {
 			'WebkitTransition': 'webkitTransitionEnd',
 			'MozTransition': 'transitionend',
