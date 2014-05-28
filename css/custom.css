@@ -46,6 +46,39 @@ a {
 	transition: left 0.3s ease-in-out;
 }
 
+.big-photo {
+	position: relative;
+}
+
+.big-photo img {
+	width: 100%;
+	z-index: 1000;
+}
+
+.nav img {
+	width: 50px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.nav img:hover {
+	opacity: 0.6;
+}
+
+#prev {
+	position: absolute;
+	top: 40%;
+	left: 0px;
+	z-index: 2000;
+}
+
+#next {
+	position: absolute;
+	top: 40%;
+	left: 94%;
+	z-index: 2000;
+}
+
 .no-js .container {
 	padding-left: 240px;
 }
