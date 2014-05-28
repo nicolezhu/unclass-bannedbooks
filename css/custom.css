@@ -81,7 +81,7 @@ a {
 	background: black;
 	position: absolute;
 	z-index: 200;
-	width: 200px;
+	width: 17%;
 	left: 0px;
 	top: 0px;
 	height: 100%;
@@ -223,7 +223,7 @@ a {
 	font-weight: 600;
 }
 
-.content ul {
+.book-list {
 	font-family: 'Cardo', serif;
 	font-size: 1.2em;
 	line-height: 1.5;
