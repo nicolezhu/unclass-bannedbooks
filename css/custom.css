@@ -46,23 +46,20 @@ a {
 	transition: left 0.3s ease-in-out;
 }
 
-.big-photo {
-	position: relative;
+.censor {
+	background-color: #fcefcc;
+	padding: 30px 0px 30px 0px;
+	font-size: 14px;
 }
 
-.big-photo img {
-	width: 100%;
-	z-index: 1000;
-}
-
-.nav img {
-	width: 50px;
-	text-align: center;
+.blackout {
+	background-color: black;
+	color: black;
 	cursor: pointer;
 }
 
-.nav img:hover {
-	opacity: 0.6;
+.scroller .image {
+	padding: 5px 8%;
 }
 
 #prev {
@@ -210,7 +207,7 @@ a {
 	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 4em;
+	font-size: 3.65em;
 	padding: 0 0 10px;
 	color: #c91515;
 	margin: 0 7.5% 40px;
