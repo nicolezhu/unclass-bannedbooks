@@ -59,6 +59,7 @@ a {
 }
 
 .scroller .image {
+	width: 100%;
 	padding: 5px 8%;
 }
 
