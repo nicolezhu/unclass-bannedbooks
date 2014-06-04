@@ -63,6 +63,23 @@ a {
 	padding: 5px 8%;
 }
 
+.title-image {
+	position: relative;
+	margin-top: 5%;
+}
+
+.title-image img {
+	position: absolute;
+}
+
+#intro-image {
+	z-index: 1;
+}
+
+#intro-image2 {
+	z-index: 2;
+}
+
 #prev {
 	position: absolute;
 	top: 40%;

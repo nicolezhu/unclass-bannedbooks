@@ -34,8 +34,10 @@
 					<div class="bb-item" id="item1">
 						<div class="content">
 							<div class="scroller">
-								<h2>Home</h2>
-								<p>In a time when access to technology is increasing, the ability to keep track of children’s consumption of media is quickly narrowing. Especially for those who challenge books in libraries and schools, the power of social media can be a double-edged sword. In the following chapters, we explore how traditional print/book censorship collides with the modern mindset and tools of today’s society.</p>
+								<div class="title-image">
+									<img src="images/words.jpg" class="image" id="intro-image" />
+									<img src="images/intro.jpg" class="image" id="intro-image2" style="opacity: 0;" />
+								</div>
 							</div>
 						</div>
 					</div>
@@ -53,7 +55,6 @@
 									<p>"I don't think that you're supposed to get THAT excited about books."</p>
 									<p><span class="blackout">You should get a boner! You have to get a boner!"</span> Gordy shouted. "Come on!"</p>
 								</div>
-								<!--<span>Uncensor</span>-->
 								<br>
 
 								<p>Imagine yourself reading this as a 17-year-old. Could you handle it?</p>
@@ -303,6 +304,10 @@
 			});
 
 			$(document).ready(function () {
+				// title page
+				$("#intro-image2").delay(1000).fadeTo(2000, 1);
+
+
 			  $('#checkbox').change(function(){
 			    setInterval(function () {
 			        moveRight();
@@ -345,6 +350,7 @@
 			    $('a.control_next').click(function () {
 			        moveRight();
 			    });
+				
 
 			    // intro and conclusion
 			    $('.blackout').click(function() {
