@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
 		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
 		<link rel="stylesheet" type="text/css" href="css/custom.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/sliders.css" />
 		<script src="js/modernizr.custom.js"></script>
 		<script src="js/modernizr.custom.79639.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
@@ -16,7 +16,7 @@
 	</head>
 	<body>
 	<div class="sidebar">
-		<h1>Between the Lines</h1>
+		<h1><a href="#item1">Between the Lines</a></h1>
 		<ul class="chapters">
 			<li class="chapter"><a href="#item1">Prologue</a></li>
 			<li class="chapter"><a href="#item2">Chapter I</a><br><span class="subheading">Shot from the Shelves</span></li>
@@ -291,6 +291,8 @@
 			</div>
 				
 		</div><!-- /container -->
+
+		<!-- JS files -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="js/jquery.mousewheel.js"></script>
 		<script src="js/jquery.jscrollpane.min.js"></script>
@@ -299,84 +301,12 @@
 		<script src="js/jquery.contentcarousel.js"></script>
 		<script src="js/jquery.bookblock.js"></script>
 		<script src="js/page.js"></script>
+		<script src="js/script.js"></script>
 	
 		<script>
 			$(function() {
 				Page.init();
 			});
-
-			$(document).ready(function () {
-				// title page
-				$("#intro-image2").delay(1000).fadeTo(2000, 1);
-
-
-			  $('#checkbox').change(function(){
-			    setInterval(function () {
-			        moveRight();
-			    }, 3000);
-			  });
-			  
-				var slideCount = $('#slider ul li').length;
-				var slideWidth = $('#slider ul li').width();
-				var slideHeight = $('#slider ul li').height();
-				var sliderUlWidth = slideCount * slideWidth;
-				
-				$('#slider').css({ width: slideWidth, height: slideHeight });
-				
-				$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-				
-			    $('#slider ul li:last-child').prependTo('#slider ul');
-
-			    function moveLeft() {
-			        $('#slider ul').animate({
-			            left: + slideWidth
-			        }, 200, function () {
-			            $('#slider ul li:last-child').prependTo('#slider ul');
-			            $('#slider ul').css('left', '');
-			        });
-			    };
-
-			    function moveRight() {
-			        $('#slider ul').animate({
-			            left: - slideWidth
-			        }, 200, function () {
-			            $('#slider ul li:first-child').appendTo('#slider ul');
-			            $('#slider ul').css('left', '');
-			        });
-			    };
-
-			    $('a.control_prev').click(function () {
-			        moveLeft();
-			    });
-
-			    $('a.control_next').click(function () {
-			        moveRight();
-			    });
-				
-
-			    // intro and conclusion
-			    $('.blackout').click(function() {
-			    	console.log("uncensored");
-			    	$(this).css('background-color', '#fcefcc');
-			    });
-
-			    // book carousel
-			    $(function() {
-				$('#ca-container').contentcarousel({
-				    // speed for the sliding animation
-				    sliderSpeed     : 500,
-				    // easing for the sliding animation
-				    sliderEasing    : 'easeOutExpo',
-				    // speed for the item animation (open / close)
-				    itemSpeed       : 500,
-				    // easing for the item animation (open / close)
-				    itemEasing      : 'easeOutExpo',
-				    // number of items to scroll at a time
-				    scroll          : 1
-				});
-			});
-
-			}); 
 		</script>
 	</body>
 </html>

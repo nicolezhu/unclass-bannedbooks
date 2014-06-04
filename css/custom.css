@@ -167,6 +167,14 @@ a {
 	color: #ffffff;
 }
 
+.sidebar a {
+	color: #ffffff;
+}
+
+.sidebar a:hover {
+	color: #ff3c00;
+}
+
 .subheading {
 	font-size: 14px;
 	padding: 0px 10px 0px 10px;
